@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+        <img src="your-photo.jpg" alt="Yehor Franchuk" class="profile-photo">
         <h1 data-lang="title">Yehor Franchuk</h1>
         <p data-lang="subtitle">AI Developer | Bioinformatics | Computational Biology</p>
     </header>
@@ -22,22 +23,32 @@
         </ul>
     </nav>
     <div class="language-selector">
-        <button onclick="setLanguage('en')">English</button>
-        <button onclick="setLanguage('de')">Deutsch</button>
+        <select onchange="setLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+        </select>
     </div>
     <main>
         <section>
             <h2 data-lang="about_title">About Me</h2>
-            <p data-lang="about_description">I specialize in artificial intelligence, bioinformatics, and molecular design. My expertise includes:</p>
+            <p data-lang="about_description">I specialize in artificial intelligence, bioinformatics, and molecular design. My experience includes:</p>
             <ul>
                 <li><strong data-lang="ai">Artificial Intelligence:</strong> CS50 course in Python.</li>
                 <li><strong data-lang="diagnostics">Molecular Diagnostics:</strong> GeneXpert, RT-PCR, qPCR.</li>
                 <li><strong data-lang="genomics">Genome Editing:</strong> CRISPR/Cas, SnapGene.</li>
-                <li><strong data-lang="pharma">Pharmaceutical Technologies:</strong> GMP, drug development.</li>
+                <li><strong data-lang="pharma">Pharmaceutical Technologies:</strong> GMP, drug development, cultivation of Dunaliella microalgae.</li>
                 <li><strong data-lang="programming">Programming:</strong> Python (Data Structures, AI).</li>
             </ul>
         </section>
     </main>
+    <aside>
+        <h2>Connect with me:</h2>
+        <ul>
+            <li><a href="https://scholar.google.com" target="_blank"><img src="icons/google-scholar.png" alt="Google Scholar"></a></li>
+            <li><a href="https://www.linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="https://github.com" target="_blank"><img src="icons/github.png" alt="GitHub"></a></li>
+        </ul>
+    </aside>
     <footer>
         <p>&copy; 2025 Yehor Franchuk</p>
     </footer>

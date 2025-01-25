@@ -1,110 +1,39 @@
-/* Основные стили */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
-}
-
-/* Шапка */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
-
-header .profile-photo {
-    width: 100px;
-    height: 100px;
+/* Фото профиля */
+.profile-photo {
+    width: 120px;  /* Уменьшение размера фото */
+    height: auto;
     border-radius: 50%;
-    border: 3px solid white;
-    margin-bottom: 10px;
-}
-
-/* Меню */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
     display: block;
-}
-
-nav ul li a:hover {
-    background-color: #4CAF50;
-    border-radius: 5px;
-}
-
-/* Основной контент */
-main {
-    padding: 20px;
-    max-width: 800px;
     margin: 0 auto;
 }
 
-section h2 {
-    text-align: center;
-    color: #4CAF50;
-}
-
-/* Сайдбар */
-aside {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-aside ul {
-    list-style: none;
-    padding: 0;
-}
-
-aside ul li {
-    margin: 10px 0;
-}
-
-aside ul li img {
-    width: 32px;
-    height: 32px;
-}
-
-/* Язык */
-.language-selector {
-    text-align: center;
-    margin: 20px;
-}
-
-.language-selector select {
-    padding: 5px;
-    font-size: 16px;
-}
-
-/* Футер */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+/* Ссылки на соцсети */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  /* Расстояние между иконками */
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    list-style: none;
+}
+
+.social-links li a img {
+    width: 35px;  /* Размер иконок соцсетей */
+    height: 35px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links li a img:hover {
+    transform: scale(1.1);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 100px; 
+    }
+    .social-links li a img {
+        width: 30px;
+        height: 30px;
+    }
 }

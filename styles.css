@@ -157,3 +157,47 @@ footer p {
         height: 30px;
     }
 }
+/* Додаткові стилі для yid.html */
+header.bg-light {
+    background-color: #0a192f !important; /* Темний фон, як у головній сторінці */
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header.bg-light h1 {
+    color: #00ffff; /* Блакитний колір для заголовка */
+}
+
+header.bg-light p {
+    color: #ffffff;
+}
+
+nav.bg-primary {
+    background-color: #002b36 !important; /* Темний фон для навігації */
+}
+
+nav.bg-primary a {
+    color: #00ffff !important; /* Блакитний колір для посилань */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav.bg-primary a:hover {
+    color: #ffffff !important; /* Білий колір при наведенні */
+}
+
+section h2, section h3 {
+    color: #00ffff; /* Блакитний колір для заголовків */
+}
+
+section p, section ul li {
+    color: #e0e0e0; /* Світлий текст для темного фону */
+}
+
+section ul li strong {
+    color: #00ffff; /* Блакитний колір для виділення */
+}
+
+footer.bg-dark {
+    background-color: #001f29 !important; /* Темний фон для футера */
+}

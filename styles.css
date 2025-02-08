@@ -15,7 +15,7 @@ body {
 /* Header */
 header {
     background: url('background.jpg') no-repeat center center/cover; /* Панорамний фон */
-    color: #fgf; /* Білий текст для контрасту */
+    color: #fff; /* Білий текст для контрасту */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Тінь для тексту */
     padding: 4rem 0; /* Більше відступів */
     position: relative; /* Для розміщення елементів поверх фона */

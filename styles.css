@@ -13,13 +13,12 @@ body {
 }
 
 /* Header */
-header h1, header p {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: rgba(0, 123, 255, 0.8); /* Синій колір з прозорістю */
-    border-radius: 20px; /* Закруглені краї */
-    margin: 0.5rem auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь */
+header {
+    background: url('background.jpg') no-repeat center center/cover; /* Панорамний фон */
+    color: #fff; /* Білий текст для контрасту */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Тінь для тексту */
+    padding: 4rem 0; /* Більше відступів */
+    position: relative; /* Для розміщення елементів поверх фона */
 }
 
 .profile-photo {

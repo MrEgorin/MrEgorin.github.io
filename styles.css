@@ -1,39 +1,94 @@
-/* Фото профиля */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ddd;
+}
+
 .profile-photo {
-    width: 100px;  /* Уменьшение размера фото */
+    width: 120px;
     height: auto;
     border-radius: 50%;
     display: block;
     margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Ссылки на соцсети */
+/* Navigation */
+nav {
+    background-color: #007bff;
+}
+
 .social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;  /* Расстояние между иконками */
-    padding: 15px 0;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .social-links li a img {
-    width: 30px;  /* Оптимальный размер иконок соцсетей */
-    height: 30px;
+    width: 35px;
+    height: 35px;
     transition: transform 0.3s ease-in-out;
 }
 
 .social-links li a img:hover {
-    transform: scale(1.2);  /* Плавное увеличение при наведении */
+    transform: scale(1.2);
 }
 
-/* Адаптивность для мобильных устройств */
+/* Sections */
+section h2 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    margin-bottom: 0.5rem;
+}
+
+section ul li strong {
+    color: #333;
+    font-weight: bold;
+}
+
+section ul ul {
+    margin-left: 1rem;
+    list-style: disc;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .profile-photo {
-        width: 80px;  /* Уменьшение для мобильных устройств */
+        width: 100px;
     }
+
     .social-links li a img {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
     }
 }

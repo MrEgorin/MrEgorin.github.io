@@ -2,8 +2,9 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #e0e0e0; /* Світлий текст для темного фону */
-    background-color: #0a192f; /* Темний фон, схожий на космос */
+    color: #e0e0e0;
+    background-color: #0a192f;
+    margin: 0;
 }
 
 .container {
@@ -14,7 +15,7 @@ body {
 
 /* Header */
 header {
-    background: url('dna-background.jpg') no-repeat center center/cover; /* Фон з ДНК або молекулярними структурами */
+    background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%), url('dna-background.jpg') no-repeat center center/cover;
     color: #ffffff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     padding: 4rem 0;
@@ -22,46 +23,25 @@ header {
 }
 
 .profile-photo {
-    width: 200px; /* Зменшено розмір фотографії */
+    width: 200px;
     height: auto;
     border-radius: 50%;
     display: block;
     margin: 0 auto;
-    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3); /* Тінь з блакитним відтінком */
-    border: 4px solid #00ffff; /* Блакитне обрамлення */
-    position: relative;
-    z-index: 2;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
+    border: 4px solid #00d4ff;
+    transition: transform 0.3s ease-in-out;
 }
 
 .profile-photo:hover {
     transform: scale(1.05);
-    filter: brightness(1.1) contrast(1.1);
-}
-
-.profile-photo-wrapper {
-    display: inline-block;
-    position: relative;
-    margin-top: -50px;
-}
-
-.profile-photo::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 4px solid rgba(0, 255, 255, 0.5); /* Блакитна рамка з прозорістю */
-    border-radius: 50%;
-    box-shadow: 0 8px 12px rgba(0, 255, 255, 0.3); /* Тінь з блакитним відтінком */
 }
 
 header h1 {
     font-size: 2.5rem;
     margin-top: 1rem;
     font-weight: bold;
-    color: #00ffff; /* Блакитний колір для заголовка */
+    color: #00d4ff;
 }
 
 header p {
@@ -72,8 +52,44 @@ header p {
 
 /* Navigation */
 nav {
-    background-color: #002b36; /* Темний фон для навігації */
+    background-color: #002b36;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #ffffff;
+}
+
+.nav-icon {
+    width: 35px;
+    height: 35px;
 }
 
 .social-links {
@@ -81,27 +97,40 @@ nav {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
     gap: 1.5rem;
 }
 
 .social-links li a img {
-    width: 35px; /* Зменшено розмір іконок */
+    width: 35px;
     height: 35px;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .social-links li a img:hover {
     transform: scale(1.2);
-    filter: brightness(0.8);
+}
+
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: #00d4ff;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* Sections */
 section h2 {
     font-size: 2rem;
-    color: #00ffff; /* Блакитний колір для заголовків */
+    color: #00d4ff;
     margin-bottom: 1.5rem;
     text-align: center;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    color: #00d4ff;
+    margin-top: 1.5rem;
 }
 
 section ul {
@@ -116,32 +145,64 @@ section ul li {
 }
 
 section ul li strong {
-    color: #00ffff; /* Блакитний колір для виділення */
+    color: #00d4ff;
     font-weight: bold;
 }
 
-section ul ul {
-    margin-left: 1.5rem;
-    list-style: disc;
+/* Photo Gallery */
+.photo-gallery {
+    margin-top: 2rem;
+}
+
+.gallery-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #00d4ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-photo:hover {
+    transform: scale(1.05);
 }
 
 /* Footer */
 footer {
-    background-color: #001f29; /* Темний фон для футера */
+    background-color: #001f29;
     color: #ffffff;
     font-size: 0.9rem;
     padding: 1rem 0;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #002b36;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
     .profile-photo {
-        width: 150px; /* Зменшено розмір фотографії для мобільних пристроїв */
+        width: 150px;
     }
 
     header h1 {
@@ -152,52 +213,8 @@ footer p {
         font-size: 1rem;
     }
 
-    .social-links li a img {
-        width: 30px;
-        height: 30px;
+    .gallery-photo {
+        width: 150px;
+        height: 150px;
     }
-}
-/* Додаткові стилі для yid.html */
-header.bg-light {
-    background-color: #0a192f !important; /* Темний фон, як у головній сторінці */
-    color: #ffffff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-header.bg-light h1 {
-    color: #00ffff; /* Блакитний колір для заголовка */
-}
-
-header.bg-light p {
-    color: #ffffff;
-}
-
-nav.bg-primary {
-    background-color: #002b36 !important; /* Темний фон для навігації */
-}
-
-nav.bg-primary a {
-    color: #00ffff !important; /* Блакитний колір для посилань */
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-nav.bg-primary a:hover {
-    color: #ffffff !important; /* Білий колір при наведенні */
-}
-
-section h2, section h3 {
-    color: #00ffff; /* Блакитний колір для заголовків */
-}
-
-section p, section ul li {
-    color: #e0e0e0; /* Світлий текст для темного фону */
-}
-
-section ul li strong {
-    color: #00ffff; /* Блакитний колір для виділення */
-}
-
-footer.bg-dark {
-    background-color: #001f29 !important; /* Темний фон для футера */
 }

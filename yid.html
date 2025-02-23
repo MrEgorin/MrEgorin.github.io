@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="text-center p-4 bg">
+    <header class="text-center p-4">
         <img src="your-photo.jpg" alt="Yehor Franchuk" class="profile-photo mb-2">
         <h1 data-lang="title">Yehor Franchuk</h1>
         <p data-lang="subtitle">Founder & CEO of YID</p>
@@ -18,9 +18,21 @@
 
     <!-- Navigation -->
     <nav class="bg-primary text-white p-3">
-        <ul class="d-flex justify-content-center gap-3">
-            <li><a href="index.html" class="text-white text-decoration-none">Back to CV</a></li>
-        </ul>
+        <div class="nav-container">
+            <button class="burger-menu" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="yid.html">YID</a></li>
+                <li><a href="https://baza14.bezpekaservice.com.ua/" target="_blank"><img src="icons/YID.png" alt="YID" class="nav-icon"></a></li>
+            </ul>
+            <ul class="social-links">
+                <li><a href="https://scholar.google.com/citations?user=uJxYzSQAAAAJ&hl=uk&authuser=1" target="_blank"><img src="icons/google-scholar.png" alt="Google Scholar"></a></li>
+                <li><a href="https://www.linkedin.com/in/mregorin/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/MrEgorin" target="_blank"><img src="icons/github.png" alt="GitHub"></a></li>
+                <li><a href="https://www.instagram.com/mregorin/" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com/@MrEgorin" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -30,24 +42,34 @@
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center">
                     <p>
-                        YID is a cutting-edge biotechnology company founded by Yehor Franchuk. Our mission is to revolutionize the field of biotechnology through the integration of artificial intelligence and computational biology.
+                        YID is a cutting-edge biotechnology company founded by Yehor Franchuk. Our mission is to revolutionize biotechnology through AI, bioinformatics, and computational biology.
                     </p>
                     <h3 class="mt-4">Our Mission</h3>
                     <p>
-                        At YID, we aim to push the boundaries of what's possible in biotechnology. By leveraging AI, genomics, drug discovery, and protein engineering, we strive to create innovative solutions for personalized medicine and beyond.
+                        We aim to advance personalized medicine and biotech innovation by leveraging AI, genomics, drug discovery, and protein engineering.
                     </p>
-
                     <h3 class="mt-4">Key Achievements</h3>
                     <ul class="list-unstyled">
-                        <li><strong>CRISPR-Cas9 Technologies:</strong> Development of precision genome editing tools.</li>
-                        <li><strong>Drug Design:</strong> Implementation of machine learning algorithms for drug discovery.</li>
-                        <li><strong>Multi-Omics Analysis:</strong> Providing personalized medicine solutions through advanced data analysis.</li>
+                        <li><strong>CRISPR-Cas9 Technologies:</strong> Precision genome editing tools.</li>
+                        <li><strong>Drug Design:</strong> Machine learning for drug discovery.</li>
+                        <li><strong>Multi-Omics Analysis:</strong> Personalized medicine solutions.</li>
                     </ul>
-
                     <h3 class="mt-4">Team Leadership</h3>
                     <p>
-                        As the founder and CEO, I lead a multidisciplinary team of experts in AI, bioinformatics, and molecular biology. Together, we are driving innovation and making a difference in the world of biotechnology.
+                        As founder and CEO, I lead a team of experts in AI, bioinformatics, and molecular biology, driving innovation in biotechnology.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photos -->
+        <section class="photo-gallery mb-4">
+            <div class="row justify-content-center">
+                <div class="col-md-3 text-center">
+                    <img src="1.png" alt="YID Photo 1" class="gallery-photo">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="2.png" alt="YID Photo 2" class="gallery-photo">
                 </div>
             </div>
         </section>
@@ -55,7 +77,9 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Yehor Franchuk</p>
+        <p>© 2025 Yehor Franchuk</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

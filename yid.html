@@ -9,26 +9,29 @@
     <link rel="icon" href="dna-icon.png" type="image/x-icon">
 </head>
 <body>
-    <!-- Header -->
-    <header class="text-center p-4">
-        <!-- PDB Visualizer Button -->
+    <!-- Top Right PDB Visualizer Button -->
+    <div class="pdb-visualizer-container">
         <a href="https://group1.gcs-camp-conference.org/pdb_viewer/" target="_blank" class="pdb-button">
             PDB Visualizer
         </a>
+    </div>
+
+    <!-- Header -->
+    <header class="text-center">
         <img src="your-photo.jpg" alt="Yehor Franchuk" class="profile-photo mb-2">
         <h1 data-lang="title">Yehor Franchuk</h1>
         <p data-lang="subtitle">Founder & CEO of YID</p>
     </header>
 
     <!-- Navigation -->
-    <nav class="bg-primary text-white p-3">
+    <nav class="bg-primary text-white">
         <div class="nav-container">
             <button class="burger-menu" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link-enhanced">Home</a></li>
-                <li><a href="yid.html" class="nav-link-enhanced">YID</a></li>
+                <li><a href="#" data-page="index.html" class="nav-button">Home</a></li>
+                <li><a href="#" data-page="yid.html" class="nav-button">YID</a></li>
                 <li><a href="https://baza14.bezpekaservice.com.ua/" target="_blank"><img src="icons/YID.png" alt="YID" class="nav-icon"></a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="#" data-page="news.html" class="nav-button">News</a></li>
             </ul>
             <ul class="social-links">
                 <li><a href="https://scholar.google.com/citations?user=uJxYzSQAAAAJ&hl=uk&authuser=1" target="_blank"><img src="icons/google-scholar.png" alt="Google Scholar"></a></li>

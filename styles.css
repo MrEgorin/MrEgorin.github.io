@@ -72,43 +72,49 @@ nav {
 
 .nav-button {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #00d4ff 0%, #007bff 100%);
-    color: #d500f9; /* Неоново-фіолетовий колір тексту */
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.8) 0%, rgba(0, 212, 255, 0.8) 100%);
+    backdrop-filter: blur(5px); /* Ефект скла */
+    color: #d500f9; /* Неоново-фіолетовий текст */
     text-decoration: none;
     font-weight: bold;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 212, 255, 0.2), inset 0 0 5px rgba(0, 212, 255, 0.3);
+    text-shadow: 0 0 5px rgba(213, 0, 249, 0.5); /* Сяйво тексту */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .nav-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5);
-    background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+    transform: scale(1.05) translateY(-2px);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.9) 0%, rgba(30, 60, 114, 0.9) 100%);
+    box-shadow: 0 6px 15px rgba(0, 212, 255, 0.4), inset 0 0 8px rgba(0, 212, 255, 0.5);
 }
 
 .nav-button.active {
-    background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
-    box-shadow: 0 4px 8px rgba(0, 255, 136, 0.5);
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.9) 0%, rgba(0, 212, 255, 0.9) 100%);
+    box-shadow: 0 6px 15px rgba(0, 255, 136, 0.4), inset 0 0 8px rgba(0, 255, 136, 0.5);
 }
 
 .pdb-button {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #ff6f61 0%, #ff3d00 100%);
-    color: #d500f9; /* Неоново-фіолетовий колір тексту */
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, rgba(255, 61, 0, 0.8) 0%, rgba(255, 111, 97, 0.8) 100%);
+    backdrop-filter: blur(5px); /* Ефект скла */
+    color: #d500f9; /* Неоново-фіолетовий текст */
     text-decoration: none;
     font-weight: bold;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(255, 61, 0, 0.3);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 61, 0, 0.2), inset 0 0 5px rgba(255, 61, 0, 0.3);
+    text-shadow: 0 0 5px rgba(213, 0, 249, 0.5); /* Сяйво тексту */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .pdb-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(255, 61, 0, 0.5);
-    background: linear-gradient(135deg, #ff3d00 0%, #ff6f61 100%);
+    transform: scale(1.05) translateY(-2px);
+    background: linear-gradient(135deg, rgba(255, 111, 97, 0.9) 0%, rgba(255, 61, 0, 0.9) 100%);
+    box-shadow: 0 6px 15px rgba(255, 61, 0, 0.4), inset 0 0 8px rgba(255, 61, 0, 0.5);
 }
 
 .nav-icon {

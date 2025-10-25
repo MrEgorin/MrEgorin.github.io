@@ -75,7 +75,7 @@
             border: 4px solid #ff00ff;
             border-radius: 15px;
             overflow: hidden;
-            margin-bottom: 1rem;
+            margin: 0 auto 1rem auto; /* Center the frame horizontally */
             box-shadow: 0 0 15px rgba(0, 247, 255, 0.7);
         }
 
@@ -91,6 +91,12 @@
         .team-member {
             text-align: center;
             color: #ffffff;
+            display: flex; /* Use flexbox for vertical centering */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px; /* Ensure enough height for alignment */
+            padding: 0 10px; /* Add padding to balance spacing */
         }
 
         .team-member h3 {
@@ -103,6 +109,7 @@
         .team-member p {
             color: #e0e0e0;
             font-size: 1rem; /* Default size */
+            margin: 0.25rem 0; /* Consistent spacing between paragraphs */
         }
 
         .team-member.long-text p {
@@ -132,6 +139,11 @@
 
             .photo-frame {
                 max-width: 150px;
+            }
+
+            .team-member {
+                min-height: 300px; /* Adjust height for mobile */
+                padding: 0 5px;
             }
         }
     </style>

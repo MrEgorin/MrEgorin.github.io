@@ -66,14 +66,26 @@
             box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
         }
 
-        .team-photo {
+        .photo-frame {
             width: 100%;
             max-width: 200px;
-            height: auto;
-            border-radius: 10px;
+            height: 0;
+            padding-top: 100%; /* Maintains a 1:1 aspect ratio */
+            position: relative;
+            border: 4px solid #ff00ff;
+            border-radius: 15px;
+            overflow: hidden;
             margin-bottom: 1rem;
-            border: 2px solid #ff00ff;
-            box-shadow: 0 0 10px rgba(0, 247, 255, 0.7);
+            box-shadow: 0 0 15px rgba(0, 247, 255, 0.7);
+        }
+
+        .photo-frame img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .team-member {
@@ -87,9 +99,18 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Dynamic text sizing based on content length */
         .team-member p {
             color: #e0e0e0;
-            font-size: 1rem;
+            font-size: 1rem; /* Default size */
+        }
+
+        .team-member.long-text p {
+            font-size: 0.9rem; /* Smaller for members with more text (e.g., Yehor, Yevhenii) */
+        }
+
+        .team-member.short-text p {
+            font-size: 1.1rem; /* Larger for members with less text (e.g., Anatolii, Dmitro) */
         }
 
         /* Increase size of FAZENA.png in navigation by 3x */
@@ -109,7 +130,7 @@
                 width: 100px; /* Adjusted for smaller screens */
             }
 
-            .team-photo {
+            .photo-frame {
                 max-width: 150px;
             }
         }
@@ -124,7 +145,7 @@
         <h1 class="main-title">FAZENA - Make Proteins and Drug Discovery Great Again</h1>
     </div>
 
-        <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="bg-primary text-white">
         <div class="nav-container">
             <button class="burger-menu" aria-label="Toggle menu">☰</button>
@@ -143,31 +164,40 @@
             </ul>
         </div>
     </nav>
+
     <!-- Team Section -->
     <section class="team-section container">
         <h2 class="text-center mb-4" style="color: #00f7ff;">Our Co-founders</h2>
         <div class="row justify-content-center">
-            <div class="col-md-3 team-member">
-                <img src="bgns21.jpg" alt="Yehor Franchuk" class="team-photo">
+            <div class="col-md-3 team-member long-text">
+                <div class="photo-frame">
+                    <img src="bgns21.jpg" alt="Yehor Franchuk" class="team-photo">
+                </div>
                 <h3>Yehor Franchuk</h3>
                 <p>Bioinformatician, Pharmaceutical Biotechnologist</p>
                 <p>Department of Molecular Biotechnology and Bioinformatics, Taras Shevchenko National University of Kyiv</p>
                 <p>Department of Molecular Oncology, Institute of Molecular Biology and Genetics NAS of Ukraine</p>
             </div>
-            <div class="col-md-3 team-member">
-                <img src="dmitro.jpg" alt="Dmitro Aleksandrovych" class="team-photo">
+            <div class="col-md-3 team-member short-text">
+                <div class="photo-frame">
+                    <img src="dmitro.jpg" alt="Dmitro Aleksandrovych" class="team-photo">
+                </div>
                 <h3>Dmitro Aleksandrovych</h3>
                 <p>Biotechnologist, Microbiologist</p>
                 <p>Department of Microbiology, Virology and Bacteriology, Odesa I.I. Mechnikov National University</p>
             </div>
-            <div class="col-md-3 team-member">
-                <img src="anatolii.jpg" alt="Anatolii Zbrotskyi" class="team-photo">
+            <div class="col-md-3 team-member short-text">
+                <div class="photo-frame">
+                    <img src="anatolii.jpg" alt="Anatolii Zbrotskyi" class="team-photo">
+                </div>
                 <h3>Anatolii Zbrotskyi</h3>
                 <p>Genetician, Biochemist</p>
                 <p>Department of Biochemistry, Ivan Franko National University of Lviv</p>
             </div>
-            <div class="col-md-3 team-member">
-                <img src="yevhenii.jpg" alt="Yevhenii Zhuromskyi" class="team-photo">
+            <div class="col-md-3 team-member long-text">
+                <div class="photo-frame">
+                    <img src="yevhenii.jpg" alt="Yevhenii Zhuromskyi" class="team-photo">
+                </div>
                 <h3>Yevhenii Zhuromskyi</h3>
                 <p>Biotechnologist</p>
                 <p>Department of Biotechnics and Engineering, National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute”</p>
@@ -181,7 +211,6 @@
         <h1 data-lang="title">Yehor Franchuk</h1>
         <p data-lang="subtitle">Co-founder & CEO of FAZENA</p>
     </header>
-
 
     <!-- Main Content -->
     <main class="container mt-3">

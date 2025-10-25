@@ -29,13 +29,33 @@
             z-index: -1;
         }
 
+        .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
         .main-title {
-            text-align: center;
             font-size: 2.5rem;
             color: #00f7ff;
             text-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff;
-            margin: 2rem 0;
             font-weight: bold;
+            margin-left: 1.5rem;
+        }
+
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            width: 150px; /* Increased size */
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.1);
         }
 
         .team-section {
@@ -72,69 +92,32 @@
             font-size: 1rem;
         }
 
-        .logo-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .logo-container img {
-            width: 100px;
-            height: auto;
-            transition: transform 0.3s;
-        }
-
-        .logo-container img:hover {
-            transform: scale(1.1);
-        }
-
         @media (max-width: 768px) {
             .main-title {
                 font-size: 1.8rem;
+                margin-left: 1rem;
+            }
+
+            .logo-container img {
+                width: 100px; /* Adjusted for smaller screens */
             }
 
             .team-photo {
                 max-width: 150px;
             }
-
-            .logo-container img {
-                width: 80px;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Main Title -->
-    <h1 class="main-title">FAZENA - Make Proteins and Drug Discovery Great Again</h1>
-
-    <!-- Logo -->
-    <div class="logo-container">
-        <img src="FAZENAful.png" alt="FAZENA Logo">
+    <!-- Main Title with Logo -->
+    <div class="title-container">
+        <div class="logo-container">
+            <img src="FAZENAful.png" alt="FAZENA Logo">
+        </div>
+        <h1 class="main-title">FAZENA - Make Proteins and Drug Discovery Great Again</h1>
     </div>
 
-    <!-- Navigation -->
-    <nav class="bg-primary text-white">
-        <div class="nav-container">
-            <button class="burger-menu" aria-label="Toggle menu">☰</button>
-            <ul class="nav-links">
-                <li><a href="#" data-page="index.html" class="nav-button">Home</a></li>
-                <li><a href="#" data-page="FAZENA.html" target="_blank"><img src="icons/FAZENA.png" alt="FAZENA" class="nav-icon"></a></li>
-                <li><a href="#" data-page="news.html" class="nav-button">News</a></li>
-                <li><a href="#" data-page="protein_redesign.html" class="nav-button">Protein Redesign</a></li>
-            </ul>
-            <ul class="social-links">
-                <li><a href="https://scholar.google.com/citations?user=uJxYzSQAAAAJ&hl=uk&authuser=1" target="_blank"><img src="icons/google-scholar.png" alt="Google Scholar"></a></li>
-                <li><a href="https://www.linkedin.com/in/mregorin/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a></li>
-                <li><a href="https://github.com/MrEgorin" target="_blank"><img src="icons/github.png" alt="GitHub"></a></li>
-                <li><a href="https://www.instagram.com/mregorin/" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a></li>
-                <li><a href="https://www.youtube.com/@MrEgorin" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-        <!-- Team Section -->
+    <!-- Team Section -->
     <section class="team-section container">
         <h2 class="text-center mb-4" style="color: #00f7ff;">Our Co-founders</h2>
         <div class="row justify-content-center">
@@ -172,6 +155,28 @@
         <h1 data-lang="title">Yehor Franchuk</h1>
         <p data-lang="subtitle">Co-founder & CEO of FAZENA</p>
     </header>
+
+    <!-- Navigation -->
+    <nav class="bg-primary text-white">
+        <div class="nav-container">
+            <button class="burger-menu" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="#" data-page="index.html" class="nav-button">Home</a></li>
+                <li><a href="#" data-page="FAZENA.html" target="_blank"><img src="icons/FAZENA.png" alt="FAZENA" class="nav-icon"></a></li>
+                <li><a href="#" data-page="news.html" class="nav-button">News</a></li>
+                <li><a href="#" data-page="protein_redesign.html" class="nav-button">Protein Redesign</a></li>
+            </ul>
+            <ul class="social-links">
+                <li><a href="https://scholar.google.com/citations?user=uJxYzSQAAAAJ&hl=uk&authuser=1" target="_blank"><img src="icons/google-scholar.png" alt="Google Scholar"></a></li>
+                <li><a href="https://www.linkedin.com/in/mregorin/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/MrEgorin" target="_blank"><img src="icons/github.png" alt="GitHub"></a></li>
+                <li><a href="https://www.instagram.com/mregorin/" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com/@MrEgorin" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <main class="container mt-3">
         <section class="mb-3">
             <h2 class="text-center mb-3">FAZENA - About the Company</h2>
@@ -220,18 +225,5 @@
     </footer>
 
     <script src="scripts.js"></script>
-    <script>
-        // Ensure logo stays responsive
-        window.addEventListener('resize', () => {
-            const logoContainer = document.querySelector('.logo-container');
-            if (window.innerWidth < 768) {
-                logoContainer.style.top = '10px';
-                logoContainer.style.right = '10px';
-            } else {
-                logoContainer.style.top = '20px';
-                logoContainer.style.right = '20px';
-            }
-        });
-    </script>
 </body>
 </html>

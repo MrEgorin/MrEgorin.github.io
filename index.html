@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-        
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,142 +8,164 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="dna-icon.png" type="image/x-icon">
     <style>
-    /* Increase size of FAZENA.png in navigation by 3x */
-        .nav-icon {
-            transform: scale(3);
-            transform-origin: center;
-            margin: 0 1rem; /* Add spacing to prevent overlap */
-        }
+        .nav-icon { transform: scale(3); transform-origin: center; margin: 0 1rem; }
+        .section-title { color: #1a3c34; border-bottom: 2px solid #1a3c34; padding-bottom: 8px; }
+        .pub-item { margin-bottom: 1.2rem; }
+        .badge-custom { background-color: #1a3c34; }
+        .profile-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #1a3c34; }
+        .inline-photo, .gallery-photo { max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
     </style>
 </head>
 <body>
+
     <!-- Header -->
-    <header class="text-center">
-        <img src="your-photo.jpg" alt="Yehor Franchuk" class="profile-photo mb-2">
-        <h1 data-lang="title">Yehor Franchuk</h1>
-        <p data-lang="subtitle"> Pharmaceutical Biotechnologist | Bioinformatician | AI & ML Developer | Computational Biologist </p>
+    <header class="text-center py-5 bg-light">
+        <img src="your-photo.jpg" alt="Yehor Franchuk" class="profile-photo mb-3">
+        <h1>Yehor Franchuk</h1>
+        <p class="lead">Bioinformatician │ Computational Biologist │ Pharmaceutical Biotechnologist │ AI & Drug Design Enthusiast</p>
     </header>
 
     <!-- Navigation -->
-    <nav class="bg-primary text-white">
-        <div class="nav-container">
-            <button class="burger-menu" aria-label="Toggle menu">☰</button>
-            <ul class="nav-links">
-                <li><a href="#" data-page="index.html" class="nav-button">Home</a></li>
-                <li><a href="#" data-page="FAZENA.html" target="_blank"><img src="icons/FAZENA.png" alt="FAZENA" class="nav-icon"></a></li>
-                <li><a href="#" data-page="news.html" class="nav-button">News</a></li>
-                <li><a href="#" data-page="protein_redesign.html" class="nav-button">Protein Redesign</a></li>
-                <!--<li><a href="https://group1.gcs-camp-conference.org/pdb_viewer/" target="_blank" class="nav-button">PDB Viewer</a></li>-->
-            </ul>
-            <ul class="social-links">
-                <li><a href="https://scholar.google.com/citations?user=uJxYzSQAAAAJ&hl=uk&authuser=1" target="_blank"><img src="icons/google-scholar.png" alt="Google Scholar"></a></li>
-                <li><a href="https://www.linkedin.com/in/mregorin/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a></li>
-                <li><a href="https://github.com/MrEgorin" target="_blank"><img src="icons/github.png" alt="GitHub"></a></li>
-                <li><a href="https://www.instagram.com/mregorin/" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a></li>
-                <li><a href="https://www.youtube.com/@MrEgorin" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a></li>
-            </ul>
+    <nav class="bg-primary text-white py-3">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center flex-wrap gap-4">
+                <button class="burger-menu text-white fs-3 d-lg-none" aria-label="Toggle menu">☰</button>
+                <ul class="nav-links list-unstyled d-flex gap-4 mb-0">
+                    <li><a href="index.html" class="text-white text-decoration-none fw-bold">Home</a></li>
+                    <li><a href="FAZENA.html" target="_blank"><img src="icons/FAZENA.png" alt="FAZENA" class="nav-icon"></a></li>
+                    <li><a href="news.html" class="text-white text-decoration-none fw-bold">News</a></li>
+                    <li><a href="protein_redesign.html" class="text-white text-decoration-none fw-bold">Protein Redesign</a></li>
+                </ul>
+                <ul class="social-links list-unstyled d-flex gap-3 mb-0">
+                    <li><a href="https://scholar.google.com/citations?user=uJxYzSQAAAAJ&hl=uk" target="_blank"><img src="icons/google-scholar.png" height="28" alt="Google Scholar"></a></li>
+                    <li><a href="https://www.linkedin.com/in/mregorin/" target="_blank"><img src="icons/linkedin.png" height="28" alt="LinkedIn"></a></li>
+                    <li><a href="https://github.com/MrEgorin" target="_blank"><img src="icons/github.png" height="28" alt="GitHub"></a></li>
+                    <li><a href="https://www.researchgate.net/profile/Franchuk-Romanovych" target="_blank"><img src="icons/researchgate.png" height="28" alt="ResearchGate"></a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container mt-3">
-        <!-- About Section -->
-        <section class="mb-3">
-            <h2 data-lang="about_title" class="text-center">About Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-4 text-center">
-                    <img src="3.png" alt="Research Photo 1" class="inline-photo">
+    <main class="container mt-5">
+
+        <!-- About -->
+        <section class="mb-5">
+            <h2 class="section-title text-center mb-4">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-3">
+                    <img src="3.png" alt="Research" class="inline-photo">
                 </div>
-                <div class="col-md-4 text-center">
-                    <p data-lang="about_description">
-                        I specialize in artificial intelligence & ML, bioinformatics, pharmaceutical biotechnology, and molecular design. My expertise spans genome editing, drug development, and computational biology, with a focus on advancing biotechnology through innovative research.
+                <div class="col-md-4">
+                    <p class="lead">
+                        MSc student in Bioinformatics & Structural Biology at Taras Shevchenko National University of Kyiv. 
+                        Currently working as Bioinformatics & Molecular Biologist at the Institute of Molecular Biology and Genetics NAS of Ukraine (since July 2025).
                     </p>
-                    <ul class="list-unstyled">
-                        <li><strong data-lang="ai">Artificial Intelligence:</strong> Completed the CS50 course in Python, AI with Python, and web development.</li>
-                        <li><strong data-lang="diagnostics">Molecular Diagnostics:</strong> Experienced with GeneXpert, RT-PCR, and qPCR technologies.</li>
-                        <li><strong data-lang="genomics">Genome Editing:</strong> Extensive work with CRISPR/Cas systems and SnapGene software.</li>
-                        <li><strong data-lang="pharma">Pharmaceutical Technologies:</strong> Expertise in GMP standards, drug development, cultivation of Dunaliella microalgae, and wound treatment studies in Wistar rats.</li>
-                        <li><strong data-lang="programming">Programming:</strong> Proficient in Python (data structures, AI), R, Java, C++, JavaScript, HTML, CSS, and SQL.</li>
-                    </ul>
                     <p>
-                        As the founder and CEO of <a href="#" data-page="FAZENA.html" class="text-primary">FAZENA</a>, I lead a team driving advancements in biotechnology through cutting-edge research and development.
+                        Research focus: long non-coding RNAs (lncRNAs) in cancer, rational protein redesign, molecular dynamics, 
+                        CRISPR-based technologies, and computational drug discovery.
+                    </p>
+                    <p class="fw-bold">
+                        Founder & CEO of <a href="FAZENA.html" class="text-primary text-decoration-none">FAZENA</a> – biotechnology startup.
                     </p>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="4.png" alt="Research Photo 2" class="inline-photo">
+                <div class="col-md-4 text-center mb-3">
+                    <img src="4.png" alt="Research" class="inline-photo">
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="mb-3">
-            <h2 data-lang="skills_title" class="text-center">Skills</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <ul class="list-unstyled">
-                        <li><strong>Programming Languages:</strong> Python, JavaScript, Java, C++, HTML, CSS, SQL, R, Bash</li>
-                        <li><strong>Tools & Frameworks:</strong> TensorFlow, PyTorch, Flask, Django, Git, BitBucket</li>
-                        <li><strong>Bioinformatics Software:</strong> SnapGene, Geneious, BLAST, Clustal, Mega, CHOP-CHOP, Schrödinger, MOE</li>
-                        <li><strong>Technologies:</strong> Docker, Linux, NGS data analysis (Illumina data)</li>
-                        <li><strong>Laboratory:</strong> Cultivation of unicellular microalgae, animal handling, excisional wound modeling, microscopy, image processing, data analysis, basic immunological and hematological assays, rational protein engineering, CRISPR gRNA design, CRISPR <em>in vitro</em> cleavage, electroporation of CHO cells, CRISPR-Based Gene Knockout</li>
+        <!-- Current Position Highlight -->
+        <section class="alert alert-success text-center mb-5">
+            <strong>July 2025 – Present:</strong> Bioinformatics & Molecular Biologist<br>
+            Institute of Molecular Biology and Genetics, NAS of Ukraine<br>
+            Research of lncRNAs as therapeutic targets and biomarkers in cancer
+        </section>
+
+        <!-- Publications -->
+        <section class="mb-5">
+            <h2 class="section-title text-center mb-4">Selected Publications & Conference Proceedings</h2>
+            <div class="pub-item">
+                <strong>Franchuk Ye.R.</strong>, Aleksandrovych D.O., Zbrotskyi A.O., Zhuromskyi Ye. (2025).<br>
+                <strong>Rational in silico redesign of the CERT1 protein.</strong><br>
+                <em>V International Scientific and Practical Conference “Fundamental and Applied Research in the Field of Pharmaceutical Technology”</em>, October 2025, National University of Pharmacy, Kharkiv, Ukraine.
+            </div>
+            <div class="pub-item">
+                Bozhkov A.I., Franchuk Ye.R. et al. (2024).<br>
+                <em>The Old Animals are Not Inferior…</em> <br>
+                <em>Archives of Gerontology and Geriatrics</em> (Preprint, under review)
+            </div>
+            <div class="pub-item">
+                Klimova O.M., … Franchuk Ye.R. (2023).<br>
+                Formation of Post-COVID Syndrome… <em>Immunological Forum Abstract</em>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="mb-5">
+            <h2 class="section-title text-center mb-4">Education</h2>
+            <ul class="list-unstyled fs-5">
+                <li><strong>MSc Biology & Biochemistry</strong> – Taras Shevchenko National University of Kyiv<br><span class="text-muted">Bioinformatics and Structural Biology │ 2024 – Present</span></li>
+                <li class="mt-3"><strong>BSc Biotechnology & Bioengineering</strong> – NTU “KhPI”<br><span class="text-muted">Pharmaceutical Biotechnology │ 2020 – 2024 │ Graduated with Distinction (Gold Medal equivalent)</span></li>
+            </ul>
+        </section>
+
+        <!-- Scientific Schools 2025 -->
+        <section class="mb-5">
+            <h2 class="section-title text-center mb-4">Scientific Schools & Workshops (2025)</h2>
+            <div class="row text-center">
+                <div class="col-md-3"><span class="badge bg-dark badge-custom fs-6">UBDS3</span><br>Uzhhorod Bioinformatics School</div>
+                <div class="col-md-3"><span class="badge bg-dark badge-custom fs-6">CRABS 2025</span><br>KSE Computational Biology</div>
+                <div class="col-md-3"><span class="badge bg-dark badge-custom fs-6">YP Biotech</span><br>CRISPR-based Knockout School</div>
+                <div class="col-md-3"><span class="badge bg-dark badge-custom fs-6">Explogen</span><br>Biologically Active Compounds</div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="mb-5">
+            <h2 class="section-title text-center mb-4">Technical & Laboratory Skills</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <strong>Computational Biology & Programming</strong>
+                    <ul>
+                        <li>Python, Bash/Linux, R, Git, SQL, C++</li>
+                        <li>Molecular Dynamics: <strong>GROMACS, OpenMM, NAMD</strong></li>
+                        <li>Bioinformatics: BLAST, Clustal, MEGA, Schrödinger Suite, MOE, PyMOL, SnapGene, CHOPCHOP, Cas-OFFinder</li>
+                        <li>NGS analysis (Illumina), CRISPR design, protein/ligand docking</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <strong>Wet-Lab & Experimental</strong>
+                    <ul>
+                        <li>CRISPR-based Knockout, <em>in vitro</em> cleavage, electroporation (CHO cells)</li>
+                        <li>Microalgae cultivation, animal modeling (Wistar rats), wound healing studies</li>
+                        <li>Microscopy, immunological/hematological assays, LC-MS, NMR, qPCR</li>
+                        <li>Recombinant protein engineering, rational protein redesign</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section class="mb-3">
-            <h2 data-lang="education_title" class="text-center">Education</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <ul class="list-unstyled">
-                        <li><strong>Taras Shevchenko National University of Kyiv:</strong> MSc in Biology and Biochemistry, Specialization: Bioinformatics and Structural Biology (2024 – Present)</li>
-                        <li><strong>National Technical University "Kharkiv Polytechnic Institute":</strong> BSc in Biotechnology and Bioengineering, Specialization: Pharmaceutical Biotechnology (2020 – 2024, Graduated with Distinction)</li>
-                        <li><strong>UBDS3 2025:</strong> Statistics, ML, Molecular Docking, Phylogenetics, Native Redesign of Proteins, Molecular Dynamics</li>
-                        <li><strong>“CRISPR-Based Gene Knockout” course as a part of the XX International Summer School:</strong> CRISPR Knockout, , CRISPR gRNA design, CRISPR <em>in vitro</em> cleavage, electroporation of CHO cells</li>
-                        <li><strong>Harvard CS50:</strong> Introduction to Computer Science, Web Development, AI with Python</li>
-                        <li><strong>Kharkiv Secondary School №145:</strong> Graduated with Distinction (Gold Medal, 2020)</li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Volunteer Activity -->
+        <section class="mb-5">
+            <h2 class="section-title text-center mb-4">Community & Volunteer Activity</h2>
+            <ul class="list-unstyled text-center fs-5">
+                <li>Volunteer bioinformatician – <strong>Bioinformatics for Ukraine</strong></li>
+                <li>Volunteer lecturer assistant – <strong>BioGENext</strong> educational program</li>
+            </ul>
         </section>
 
-        <!-- Research Experience -->
-        <section class="mb-3">
-            <h2 class="text-center">Research Experience</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <ul class="list-unstyled">
-                        <li><strong>V.N. Karazin Kharkiv National University, Institute of Biology:</strong> Research Assistant (Aug 2023 – Jun 2024) - Excisional wound healing in Wistar rats</li>
-                        <li><strong>Institute of General and Emergency Surgery named after V.T. Zaitsev:</strong> Laboratory Intern (Feb 2023 – Aug 2023) - Post-COVID syndrome inflammation studies</li>
-                        <li><strong>The Institute of Molecular Biology and Genetics of NASU:</strong> Bioinformatics & molecular biologist (Jul 2025 – nowadays) - Study of lncRNA for cancer treatment</li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Gallery -->
+        <section class="photo-gallery text-center mb-5">
+            <img src="5.png" alt="Lab work" class="gallery-photo" style="max-width: 420px;">
         </section>
+
     </main>
 
-    <!-- Photos at the bottom -->
-    <section class="photo-gallery mb-3">
-        <div class="row justify-content-center">
-            <div class="col-md-3 text-center">
-                <img src="5.png" alt="Research Photo 3" class="gallery-photo">
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center">
-        <p>© 2025 Yehor Franchuk</p>
+    <footer class="bg-dark text-white text-center py-4">
+        <p>© 2025 Yehor Franchuk • Kyiv, Ukraine</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

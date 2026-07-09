@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yefarm - Protein Redesign</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../dna-icon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold">Protein Redesign</h1>
+            <p class="lead">Semi-rational redesign of proteins containing the START domain</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="nav-logo-link">
+                <img src="../dna-icon.png" alt="DNA Logo" style="height: 30px; margin-right: 10px;">
+                <span style="font-weight: 700; color: #ffffff; letter-spacing: 1px;">FRANCHUK</span>
+            </a>
+            <button class="burger-menu" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="../" class="nav-button">Home</a></li>
+                <li><a href="../news/" class="nav-button">News</a></li>
+                <li><a href="../startup/" class="nav-button">My Startup</a></li>
+            </ul>
+            <ul class="social-links">
+                <li><a href="https://scholar.google.com/citations?user=uJxYzSQAAAAJ&hl=uk" target="_blank"><img src="../icons/google-scholar.png" alt="Google Scholar"></a></li>
+                <li><a href="https://www.linkedin.com/in/mregorin/" target="_blank"><img src="../icons/linkedin.png" alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/MrEgorin" target="_blank"><img src="../icons/github.png" alt="GitHub"></a></li>
+                <li><a href="https://www.researchgate.net/profile/Franchuk-Romanovych" target="_blank"><img src="../icons/researchgate.png" alt="ResearchGate"></a></li>
+                <li><a href="https://www.instagram.com/mregorin/" target="_blank"><img src="../icons/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com/@MrEgorin" target="_blank"><img src="../icons/youtube.png" alt="YouTube"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <!-- Research Team & Intro -->
+                <section class="glass-panel mb-4">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Our team conducted a semi-rational redesign of proteins containing the <strong>START domain</strong>.
+                    </p>
+                    <p>
+                        This structural molecular biology research forms the academic and methodology cornerstone of Yefarm's CADD and protein structure-based virtual screening workflows.
+                    </p>
+                </section>
+
+                <!-- Molecular Evolution -->
+                <section class="glass-panel mb-4">
+                    <h2>Molecular Evolution & Domain Conservation</h2>
+                    <p>
+                        We investigated the molecular evolution of the START domain by constructing a phylogenetic tree. Multiple sequence alignment revealed an RMSD score of <strong>0.154</strong>, indicating high structural conservation across species.
+                    </p>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-5 mb-3 text-center">
+                            <img src="../tree.png" alt="Phylogenetic Tree" class="gallery-photo">
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">START Domain Phylogenetic Tree</p>
+                        </div>
+                        <div class="col-md-5 mb-3 text-center">
+                            <img src="../msa.png" alt="Multiple Sequence Alignment" class="gallery-photo">
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Alignment & RMSD = 0.154</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Redesign Methodology -->
+                <section class="glass-panel mb-4">
+                    <h2>Redesign Pipeline & Scaffold Generation</h2>
+                    <p>
+                        Based on phylogenetic analysis, five representative protein structures were selected for semi-rational design. The START domain is a conserved protein module critical for lipid binding and transport, cellular signaling, and sterol metabolism.
+                    </p>
+                    <div class="row justify-content-center my-3">
+                        <div class="col-md-6 text-center">
+                            <img src="../domain.png" alt="START Domain 3D Structure" class="gallery-photo">
+                        </div>
+                    </div>
+                    <p>
+                        Native redesign was performed by excising the START domain from well-characterized proteins, specifically <strong>CERT1 (Homo sapiens)</strong>, using an automated script in Open Source PyMOL. Watch the full process walkthrough on <a href="https://youtu.be/lGiLzbwP0KM?si=md8HnCh0scbI2Rb3" target="_blank" style="color: var(--accent-cyan); text-decoration: underline;">YouTube ↗</a>.
+                    </p>
+                    <p>
+                        Using the online tool <strong>P2Rank</strong>, binding sites with high scores were identified. Conserved regions were protected, and <strong>RFdiffusion</strong> was applied to generate a hydrophilic scaffold around the conserved lipid-binding core, facilitating cloning in prokaryotic hosts.
+                    </p>
+                    <p>
+                        The generated structure initially lacked a biologically justified amino acid sequence (poly-glycine stretches). <strong>ProteinMPNN</strong> was utilized to convert the PDB structural nodes into a 2D graph, and subsequently back to a FASTA sequence file.
+                    </p>
+                    <p>
+                        The FASTA sequences were resolved using <strong>AlphaFold 2</strong>, selecting the best structural variant based on a pTM score of <strong>0.9</strong>, confirming high solubility and folding stability.
+                    </p>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-6 mb-3 text-center">
+                            <img src="../rank1.png" alt="AlphaFold Scoring 1" class="gallery-photo">
+                        </div>
+                        <div class="col-md-6 mb-3 text-center">
+                            <img src="../rank2.png" alt="AlphaFold Scoring 2" class="gallery-photo">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Docking and Molecular Dynamics -->
+                <section class="glass-panel mb-4">
+                    <h2>Docking & Molecular Dynamics Simulations</h2>
+                    <p>
+                        Docking of the modified CERT1 protein (post-redesign) with <em>2-[4-[3-tert-butyl-5-(2-pyridin-2-ylethyl)phenyl]phenyl]sulfonylethanol</em> (<strong>9N3, compound B5</strong>) was performed using <strong>CB-Dock2</strong> and compared to the native protein-ligand complex.
+                    </p>
+                    <div class="row justify-content-center my-3">
+                        <div class="col-md-6 text-center">
+                            <img src="../dock.png" alt="Docking Result 3D" class="gallery-photo">
+                        </div>
+                    </div>
+                    <p>
+                        The modified protein exhibited a higher number of residues participating in ligand interactions with a distinct binding pocket on the 3D surface, validating its capacity to adapt conformationally to compound B5.
+                    </p>
+                    <div class="row justify-content-center my-3">
+                        <div class="col-md-6 text-center">
+                            <img src="../pocket.png" alt="Binding Pocket Analysis" class="gallery-photo">
+                        </div>
+                    </div>
+                    <p>
+                        To assess structural integrity and stability, molecular dynamics simulations were conducted for <strong>0.2 nanoseconds</strong> under human physiological conditions using <strong>OpenMM</strong>.
+                    </p>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-4 mb-3 text-center">
+                            <img src="../dynam.png" alt="Molecular Dynamics Simulation" class="gallery-photo">
+                        </div>
+                        <div class="col-md-4 mb-3 text-center">
+                            <img src="../scoring.png" alt="Scoring Metrics" class="gallery-photo">
+                        </div>
+                        <div class="col-md-4 mb-3 text-center">
+                            <img src="../stab.png" alt="Stability Metrics" class="gallery-photo">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Yehor Franchuk. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>
